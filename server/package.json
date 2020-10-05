@@ -1,6 +1,6 @@
 {
   "name": "@bhoos/boot-loader-server",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "index.js",
   "bin": {
     "boot-loader-server": "./dist/index.js"
@@ -15,8 +15,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@bhoos/boot-loader-common": "^1.0.0",
-    "@bhoos/boot-loader-client": "^1.0.0",
+    "@bhoos/boot-loader-client": "^0.1.0",
+    "@bhoos/boot-loader-common": "^0.1.0",
     "@bhoos/udp": "^1.0.1",
     "express": "^4.17.1"
   },

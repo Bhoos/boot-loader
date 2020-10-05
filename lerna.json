@@ -1,7 +1,10 @@
 {
   "packages": [
-    "cli", "client", "common", "server"
+    "cli",
+    "client",
+    "common",
+    "server"
   ],
   "npmClient": "yarn",
-  "version": "0.0.0"
+  "version": "0.1.0"
 }

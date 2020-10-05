@@ -1,6 +1,6 @@
 {
   "name": "@bhoos/boot-loader-cli",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "bin": {
     "boot-loader-cli": "./dist/index.js"
@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@bhoos/boot-loader-common": "^1.0.0",
+    "@bhoos/boot-loader-common": "^0.1.0",
     "commander": "^6.1.0"
   },
   "devDependencies": {
