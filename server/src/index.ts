@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { UDP_PORT, getOracle, App, Trigger } from '@bhoos/boot-loader-common';
 import { setup } from '@bhoos/boot-loader-client';
 import { UdpSocket, UdpStream } from '@bhoos/udp';
