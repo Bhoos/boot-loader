@@ -1,0 +1,24 @@
+{
+  "name": "@bhoos/boot-loader-common",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "dependencies": {
+    "@bhoos/serialization": "^1.0.3"
+  },
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "yarn clean && tsc"
+  },
+  "repository": "git@github.com:bhoos/boot-loader",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/node": "^14.11.2",
+    "jest": "^26.4.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.0.3"
+  }
+}
