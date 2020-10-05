@@ -8,9 +8,10 @@ import { install } from './install';
 program
   .requiredOption('-a, --app <app>', 'Name of the application')
   .requiredOption('-t, --type <type>', 'Application type (development, staging, production)')
-  .requiredOption('-r, --repo <repo>', 'Full name of the repo or package')
-  .requiredOption('-d, --directory <directory>', 'Working directory for the application')
-  .requiredOption('-u, --user <user>', 'User account used to run the app')
+  .requiredOption('-o, --owner <owner>', 'The repository owner')
+  .option('-r, --repo <repo>', 'Full name of the repo or package')
+  .option('-d, --directory <directory>', 'Working directory for the application')
+  .option('-u, --user <user>', 'User account used to run the app')
   .option('-s, --script <script>', 'Script to execute, Ex: dist/index.js')
   .option('-m, --max-clones <maxClones>', 'Maximum number of clones allowed for this app', (value) => parseInt(value) || 2)
   .option('-e, --env [env...]', 'Environment variables')
