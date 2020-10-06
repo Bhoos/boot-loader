@@ -3,15 +3,16 @@ import { App, Trigger } from '@bhoos/boot-loader-common';
 
 export class AppClient {
   private readonly app: App;
-  private readonly sendTrigger: (startReplacement: boolean) => void;
-
+  private readonly stream: UdpStream;
+  private readonly address: string;
   get name() {
-    return `${this.app.app} | ${this.app.type} | ${this.app.owner}/${this.app.repo} | ${this.app.version}`;
+    return `${this.app.app} | ${this.address} | ${this.app.type} | ${this.app.owner}/${this.app.repo} | ${this.app.version}`;
   }
 
-  constructor(app: App, sendTrigger: (startReplacement: boolean) => void) {
+  constructor(app: App, stream: UdpStream) {
     this.app = app;
-    this.sendTrigger = sendTrigger;
+    this.stream = stream;
+    this.address = this.stream.remote.address;
   }
 
   trigger(event: string, body: any) {
@@ -26,6 +27,6 @@ export class AppClient {
     }
 
     // TODO: Run replace update only if there is a slot available and this is not a load decrease event
-    this.sendTrigger(true);
+    this.stream.send(new Trigger(true));
   }
 }

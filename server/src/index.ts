@@ -21,10 +21,7 @@ const socket = new UdpSocket<AppClient>(getOracle(), 1);
 socket.listen(UDP_PORT);
 
 socket.onConnect(App, async (app, stream) => {
-  const appClient = new AppClient(app, (startReplacement) => {
-    stream.send(new Trigger(startReplacement))
-  });
-
+  const appClient = new AppClient(app, stream);
   apps.push(appClient);
   return appClient;
 });
