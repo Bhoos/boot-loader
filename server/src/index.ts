@@ -68,8 +68,8 @@ webapp.post('/git-hook/*', (req, res) => {
 // Display status page
 webapp.get('/status', (req, res) => {
   res.header('Content-Type', 'text/plain');
-  let content = 'Listed apps:\n'
-  content += apps.map(a => a.name).join('\n\t');
+  let content = 'Listed apps:\n\t';
+  content += apps.map((a, idx) => `${idx+1}. ${a.name}`).join('\n\t');
   res.send(content);
 });
 
