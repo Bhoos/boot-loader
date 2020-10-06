@@ -8,7 +8,7 @@ export function install(options: Options) {
   const directory = getDirectory(options);
 
   // Create the directory, if one does not already exists
-  const k = path.normalize(options.directory);
+  const k = path.normalize(directory);
 
   // Break down the path individual folders and create if required
   const parts = k.split(path.sep);
@@ -28,7 +28,7 @@ export function install(options: Options) {
 
   if (options.type === 'development') {
     // clone repo into the target folder and run the build script
-    execSync(`git clone https://github.com/${options.owner}${repo} .`);
+    execSync(`git clone https://github.com/${options.owner}/${repo} .`);
 
     // install dependencies
     execSync(`yarn`);
