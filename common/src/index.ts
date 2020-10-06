@@ -1,7 +1,7 @@
 export { App } from './App';
 export { Trigger } from './Trigger';
 export { Status } from './Status';
-export { Options } from './types';
+export { Options, AppType } from './types';
 export { getOracle } from './getOracle';
 export { getPackage } from './getPackage';
 export { getDirectory } from './getDirectory';

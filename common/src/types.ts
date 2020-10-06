@@ -1,7 +1,9 @@
+export type AppType = 'development' | 'staging' | 'production';
+
 export type Options = {
   app: string,
   owner: string,
-  type: 'development' | 'staging' | 'production',
+  type: AppType,
   user?: string,  // if not provided use the same as owner
   repo?: string,  // if not provided use the same as app
   directory?: string, // if not provided use the same as app
