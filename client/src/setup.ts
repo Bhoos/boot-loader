@@ -12,7 +12,7 @@ export function setup(app: string, version: string, owner: string, repo: string,
   const appInfo = App.create(app, version, owner, repo, maxClones);
   if (appInfo.type === 'development') {
     appInfo.version = appInfo.version + '-' + execSync(
-      `git rev-parse -short HEAD`, { cwd: getDirectory(appInfo)}
+      `git rev-parse --short HEAD`, { cwd: getDirectory(appInfo)}
     ).toString('utf-8').trim();
   }
 
