@@ -270,10 +270,10 @@
   dependencies:
     "@bhoos/utils" "^1.0.0"
 
-"@bhoos/udp@^1.0.1":
-  version "1.0.1"
-  resolved "https://npm.pkg.github.com/download/@bhoos/udp/1.0.1/254e37a15509c1e907a996156a3474fd5d732bfc32b6deb9385b4d03b6def736#12252e3c0a24f8890748495f3d811a4962ec02d8"
-  integrity sha512-w6+zcw/6XnZAo2a1MSK9ln/oSLMsArGGtfgyeZ90vwXKEPxsYV7eWe7IdQsg0ti8BQVTqyE9FU38daTBDqHyEA==
+"@bhoos/udp@^1.0.2":
+  version "1.0.2"
+  resolved "https://npm.pkg.github.com/download/@bhoos/udp/1.0.2/d3a768191973c3c0855b9c98137646693ad1d2602b3efebd181f1f25989deb2c#743000c968c273016dd93f73c5bd4e034c133011"
+  integrity sha512-R4hcfVS9+rxaSToKbz1OOSBOP4X0B6ty9E85cKVQy5e2iSzA6Q9cAb3/H3jWambuEkB/6wyRp3xd8UQyljdMRQ==
   dependencies:
     "@bhoos/serialization" "^1.0.0"
 
