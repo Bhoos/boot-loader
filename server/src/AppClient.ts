@@ -6,7 +6,7 @@ export class AppClient {
   private readonly sendTrigger: (startReplacement: boolean) => void;
 
   get name() {
-    return `${this.app.owner}/${this.app.repo}-${this.app.type}`;
+    return `${this.app.app} | ${this.app.type} | ${this.app.owner}/${this.app.repo} | ${this.app.type} | ${this.app.version}`;
   }
 
   constructor(app: App, sendTrigger: (startReplacement: boolean) => void) {
