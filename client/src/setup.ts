@@ -3,17 +3,18 @@ import { getOracle, UDP_PORT, App, Trigger, Status, getDirectory } from '@bhoos/
 import { update } from './update';
 import { execSync, exec } from 'child_process';
 
-
 export function setup(app: string, version: string, owner: string, repo: string, maxClones: number) {
   const oracle = getOracle();
 
   // In case of development mode, include the commit sha in the
   // version
   const appInfo = App.create(app, version, owner, repo, maxClones);
+  const cwd = getDirectory(appInfo)
   if (appInfo.type === 'development') {
-    appInfo.version = appInfo.version + '-' + execSync(
-      `git rev-parse --short HEAD`, { cwd: getDirectory(appInfo)}
-    ).toString('utf-8').trim();
+    appInfo.version = appInfo.version + '-'
+     + execSync(`git rev-parse --short HEAD`, { cwd }).toString('utf-8').trim()
+     + '::'
+     + execSync(`git show -s --format=%ci`, { cwd }).toString('utf-8').trim();
   }
 
   const socket = new UdpSocket(oracle, 1);
