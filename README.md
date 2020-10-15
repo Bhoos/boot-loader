@@ -12,8 +12,8 @@ App installation and update library
 1. Manage Development/Staging/Production deploy of applications
 2. Use github flow to automatically update running instances
    * github/master for `Development` mode
-   * github/draft-release for `Staging` mode
-   * github/release for `Production` mode
+   * github/package@next for `Staging` mode
+   * github/package for `Production` mode
 3. Add/Remove application instances as required
 4. Define rules for application scaling 
 5. Provide message queing (pub/sub) across applications
